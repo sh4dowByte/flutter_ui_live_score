@@ -8,7 +8,16 @@ class ExplorePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> items = [
+    List<Map<String, dynamic>> filterItems = [
+      {'id': 1, 'name': 'Soccer', 'icon': 'image 3.png'},
+      {'id': 2, 'name': 'Basketball', 'icon': 'image 4.png'},
+      {'id': 3, 'name': 'Football', 'icon': 'image 2.png'},
+      {'id': 4, 'name': 'Baseball', 'icon': 'baseball_26be 1.png'},
+      {'id': 5, 'name': 'Tennis', 'icon': 'image 7.png'},
+      {'id': 6, 'name': 'Volleyball', 'icon': 'image 1.png'},
+    ];
+
+    List<Map<String, dynamic>> trendingNews = [
       {
         'image': 'assets/image/articel4.png',
         'title': 'Arsenal vs Aston Villa prediction',
@@ -23,6 +32,29 @@ class ExplorePage extends StatelessWidget {
         'image': 'assets/image 135.png',
         'title': 'Arsenal vs Aston Villa prediction',
         'date': 'May 15, 2020',
+      },
+    ];
+    List<Map<String, dynamic>> news = [
+      {
+        'image': 'assets/image 135.png',
+        'title':
+            'Rumor Has It: Lampard’s position under threat position under threat',
+        'date': '04 JAN 2021, 14:16',
+      },
+      {
+        'image': 'assets/image/articel5.png',
+        'title': 'Artrta sees ‘natural leader’ Tierney as a future,',
+        'date': '04 JAN 2021, 14:16',
+      },
+      {
+        'image': 'assets/image 136.png',
+        'title': 'Athletic Bilbao to appoint Marcelino as coach until, ...',
+        'date': '04 JAN 2021, 14:16',
+      },
+      {
+        'image': 'assets/image 147.png',
+        'title': 'Barcelona suffer too much late in games, says Ter Stegen',
+        'date': '04 JAN 2021, 14:16',
       },
     ];
 
@@ -49,48 +81,22 @@ class ExplorePage extends StatelessWidget {
           const SizedBox(height: 24),
 
           // Filter item
-          const AppSelectItemSmall(item: [
-            {'id': 1, 'name': 'Soccer', 'icon': 'image 3.png'},
-            {'id': 2, 'name': 'Basketball', 'icon': 'image 4.png'},
-            {'id': 3, 'name': 'Football', 'icon': 'image 2.png'},
-            {'id': 4, 'name': 'Baseball', 'icon': 'baseball_26be 1.png'},
-            {'id': 5, 'name': 'Tennis', 'icon': 'image 7.png'},
-            {'id': 6, 'name': 'Volleyball', 'icon': 'image 1.png'},
-          ]),
+          AppSelectItemSmall(item: filterItems),
 
           const SizedBox(height: 32),
 
           Expanded(
             child: ListView(
               children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 28.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 28.0),
                   child: Column(
                     children: [
-                      AppNews(
-                        image: 'assets/image 135.png',
-                        title:
-                            'Rumor Has It: Lampard’s position under threat position under threat',
-                        date: '04 JAN 2021, 14:16',
-                      ),
-                      AppNews(
-                        image: 'assets/image/articel5.png',
-                        title:
-                            'Artrta sees ‘natural leader’ Tierney as a future,',
-                        date: '04 JAN 2021, 14:16',
-                      ),
-                      AppNews(
-                        image: 'assets/image 136.png',
-                        title:
-                            'Athletic Bilbao to appoint Marcelino as coach until, ...',
-                        date: '04 JAN 2021, 14:16',
-                      ),
-                      AppNews(
-                        image: 'assets/image 147.png',
-                        title:
-                            'Barcelona suffer too much late in games, says Ter Stegen',
-                        date: '04 JAN 2021, 14:16',
-                      ),
+                      ...news.map((e) => AppNews(
+                            image: e['image'],
+                            title: e['title'],
+                            date: e['date'],
+                          )),
                     ],
                   ),
                 ),
@@ -110,14 +116,14 @@ class ExplorePage extends StatelessWidget {
                   height: 169,
                   child: ListView.builder(
                     shrinkWrap: true,
-                    itemCount: items.length,
+                    itemCount: trendingNews.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                      final item = items[index];
+                      final item = trendingNews[index];
 
                       EdgeInsets margin = EdgeInsets.only(
                         left: index == 0 ? 20 : 0,
-                        right: index == items.length - 1 ? 20 : 0,
+                        right: index == trendingNews.length - 1 ? 20 : 0,
                       );
 
                       return GestureDetector(

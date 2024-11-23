@@ -18,7 +18,7 @@ class _MenuPageState extends State<MenuPage> {
   final List<Widget> _pages = [
     const Center(child: HomePage()),
     const Center(child: ExplorePage()),
-    const Center(child: Text('Profile Page')),
+    const Center(child: StandingsPage()),
     const Center(child: ProfilePage()),
   ];
 
