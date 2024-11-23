@@ -19,7 +19,7 @@ class _MenuPageState extends State<MenuPage> {
     const Center(child: HomePage()),
     const Center(child: ExplorePage()),
     const Center(child: Text('Profile Page')),
-    const Center(child: Text('Profile Page')),
+    const Center(child: ProfilePage()),
   ];
 
   void _onTabTapped(int index) {

@@ -109,7 +109,7 @@ class AppTheme {
       primaryColor: const Color(0xFF246BFD),
       primaryColorDark: const Color(0xFFE6E7F2),
       primaryColorLight: Colors.black,
-      dividerTheme: DividerThemeData(color: Colors.grey[800]),
+      dividerTheme: DividerThemeData(color: Color(0xFF222232)),
       tabBarTheme: TabBarTheme(
         splashFactory: NoSplash.splashFactory, // Menonaktifkan ripple
         overlayColor: MaterialStateProperty.all(

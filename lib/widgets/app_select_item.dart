@@ -55,8 +55,12 @@ class _AppSelectItemState extends State<AppSelectItem> {
                     borderRadius: BorderRadius.circular(16),
                     gradient: LinearGradient(
                       colors: [
-                        isActive ? Color(0xFFF4A58A) : Color(0xFF222232),
-                        isActive ? Color(0xFFED6B4E) : Color(0xFF222232)
+                        isActive
+                            ? const Color(0xFFF4A58A)
+                            : const Color(0xFF222232),
+                        isActive
+                            ? const Color(0xFFED6B4E)
+                            : const Color(0xFF222232)
                       ], // Warna gradien
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -70,11 +74,11 @@ class _AppSelectItemState extends State<AppSelectItem> {
                         .cover, // Menyesuaikan gambar dengan area yang tersedia
                   ),
                 ),
-                SizedBox(height: 6),
+                const SizedBox(height: 6),
                 Text(
                   item['name'],
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                   ),
                 )

@@ -123,8 +123,8 @@ class _AppInterestSelectorState extends State<AppInterestSelector> {
           child: Column(
             children: [
               Container(
-                width: 90,
-                height: 90,
+                width: 80,
+                height: 80,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(90),

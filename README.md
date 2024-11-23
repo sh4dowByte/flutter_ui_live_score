@@ -1,4 +1,4 @@
-![1732238804004](image/README/1732238804004.png)
+![1732349085635](image/README/Thumbnail.png)
 
 <p align="center">
     <img src="https://github.com/sh4dowByte/flutter_ui_live_score/actions/workflows/main.yaml/badge.svg?branch=release" alt="CI/CD Badge" style="max-width: 100%;">
@@ -8,13 +8,13 @@
 
 # Flutter Live Score UI
 
-Flutter Meditation App UI is a mobile application built using Flutter. This project is a result of slicing a design created in Figma, with a focus on a modern and responsive user interface to deliver an optimal user experience.
+Flutter Live Score UI is a mobile application developed using Flutter, designed to display live sports scores with a modern and responsive user interface. This project is a result of slicing a design created in Figma, focusing on visual details and delivering an optimal user experience. The app serves as a reference for building live score applications with an attractive UI and high performance.
 
 ## 🎨 Design
 
 The design of this application is based on the provided Figma file. The slicing process was carried out meticulously to ensure the application accurately represents the design.
 
-Source: [Figma File by Afsar](https://www.figma.com/community/file/882888114457713282)
+Source: [Figma File](https://www.figma.com/community/file/936495139689782604)
 
 ## 🚀 Feature
 

@@ -4,3 +4,4 @@ export 'menu.dart';
 
 export 'menu/home.dart';
 export 'menu/explore.dart';
+export 'menu/profile.dart';
