@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../config/pallete.dart';
 import '../../../config/routes.dart';
 import '../../../widgets/widgets.dart';
 
@@ -71,12 +72,11 @@ class ExplorePage extends StatelessWidget {
             child: AppTextInput(
               onTap: () => Navigator.pushNamed(context, Routes.searchExplore),
               hintText: 'Search for news, team, match, etc...',
-              fillColor: const Color(0xFF222232),
+              fillColor: Pallete.black1,
               icon: SvgPicture.asset(
                 'assets/icon/Search.svg',
                 fit: BoxFit.fitHeight,
-                colorFilter:
-                    const ColorFilter.mode(Color(0xFF65656B), BlendMode.srcIn),
+                colorFilter: ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
               ),
             ),
           ),
@@ -99,6 +99,8 @@ class ExplorePage extends StatelessWidget {
                             image: e['image'],
                             title: e['title'],
                             date: e['date'],
+                            onTap: () => Navigator.pushNamed(
+                                context, Routes.articleDetail),
                           )),
                     ],
                   ),
@@ -129,67 +131,14 @@ class ExplorePage extends StatelessWidget {
                         right: index == trendingNews.length - 1 ? 20 : 0,
                       );
 
-                      return GestureDetector(
-                        child: Container(
-                          width: 250,
-                          padding: const EdgeInsets.symmetric(horizontal: 5),
+                      return AppNews(
+                          image: item['image'],
+                          title: item['title'],
+                          date: item['date'],
+                          isBigger: true,
                           margin: margin,
-                          child: Stack(
-                            children: [
-                              ClipRRect(
-                                borderRadius:
-                                    const BorderRadius.all(Radius.circular(10)),
-                                child: Stack(
-                                  children: [
-                                    Image.asset(
-                                      item['image'],
-                                      fit: BoxFit.cover,
-                                      width: 250,
-                                      height: double.infinity,
-                                    ),
-                                    Container(
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          end: Alignment
-                                              .topCenter, // Awal gradien
-                                          begin: Alignment
-                                              .bottomCenter, // Akhir gradien
-
-                                          colors: [
-                                            Colors.black.withOpacity(
-                                                0.7), // Warna awal dengan transparansi
-                                            Colors.transparent, // Warna akhir
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 250,
-                                padding: const EdgeInsets.all(20.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    Text(
-                                      item['title'],
-                                      style: const TextStyle(fontSize: 18),
-                                    ),
-                                    Text(
-                                      item['date'],
-                                      style: const TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      );
+                          onTap: () => Navigator.pushNamed(
+                              context, Routes.articleDetail));
                     },
                   ),
                 ),
@@ -206,6 +155,8 @@ class AppNews extends StatelessWidget {
   final String image;
   final String title;
   final String date;
+  final bool? isBigger;
+  final EdgeInsets? margin;
   final Function()? onTap;
 
   const AppNews({
@@ -214,10 +165,73 @@ class AppNews extends StatelessWidget {
     required this.title,
     required this.date,
     this.onTap,
+    this.isBigger = false,
+    this.margin,
   });
 
   @override
   Widget build(BuildContext context) {
+    if (isBigger == true) {
+      return GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: 250,
+          padding: const EdgeInsets.symmetric(horizontal: 5),
+          margin: margin,
+          child: Stack(
+            children: [
+              ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      image,
+                      fit: BoxFit.cover,
+                      width: 250,
+                      height: double.infinity,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: double.infinity,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          end: Alignment.topCenter, // Awal gradien
+                          begin: Alignment.bottomCenter, // Akhir gradien
+
+                          colors: [
+                            Colors.black.withOpacity(
+                                0.7), // Warna awal dengan transparansi
+                            Colors.transparent, // Warna akhir
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: 250,
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      title,
+                      style: const TextStyle(fontSize: 18),
+                    ),
+                    Text(
+                      date,
+                      style: const TextStyle(fontSize: 15),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -254,9 +268,9 @@ class AppNews extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     date,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 12,
-                      color: Color(0xFF65656B),
+                      color: Pallete.grey2,
                     ),
                   ),
                 ],
@@ -266,8 +280,7 @@ class AppNews extends StatelessWidget {
             SvgPicture.asset(
               'assets/icon/Bookmark.svg',
               width: 25,
-              colorFilter:
-                  const ColorFilter.mode(Color(0xFF65656B), BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
             ),
           ],
         ),

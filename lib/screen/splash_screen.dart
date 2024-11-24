@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../config/pallete.dart';
 import '../config/routes.dart';
 import '../widgets/widgets.dart';
 
@@ -35,7 +36,7 @@ class SplashScreenPage extends StatelessWidget {
                         height: 276.48,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(57.6),
-                          color: Color(0xFF222232),
+                          color: Pallete.black1,
                         ),
                       ),
                     ),
@@ -85,7 +86,7 @@ class SplashScreenPage extends StatelessWidget {
                         height: 24,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(16),
-                          color: Color(0xFF246BFD),
+                          color: Pallete.blue1,
                         ),
                       ),
                     ),
@@ -117,7 +118,7 @@ class SplashScreenPage extends StatelessWidget {
                     onTap: () {
                       showModalBottomSheet(
                         context: context,
-                        backgroundColor: Color(0xFF222232),
+                        backgroundColor: Pallete.black1,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.vertical(
                             top: Radius.circular(20),
@@ -170,7 +171,7 @@ class SignIn extends StatelessWidget {
               width: 66,
               height: 5,
               decoration: BoxDecoration(
-                  color: Color(0xFF65656B),
+                  color: Pallete.grey2,
                   borderRadius: BorderRadius.circular(100)),
             ),
           ),
@@ -187,7 +188,7 @@ class SignIn extends StatelessWidget {
             icon: SvgPicture.asset(
               'assets/icon/Message.svg',
               fit: BoxFit.fitHeight,
-              colorFilter: ColorFilter.mode(Color(0xFF65656B), BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
             ),
           ),
           SizedBox(height: 24),
@@ -196,7 +197,7 @@ class SignIn extends StatelessWidget {
             icon: SvgPicture.asset(
               'assets/icon/Password.svg',
               fit: BoxFit.fitHeight,
-              colorFilter: ColorFilter.mode(Color(0xFF65656B), BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
             ),
           ),
           SizedBox(height: 10),

@@ -64,8 +64,8 @@ class _MenuPageState extends State<MenuPage> {
                     'assets/icon/Home.svg',
                     width: 25,
                     fit: BoxFit.contain,
-                    colorFilter: const ColorFilter.mode(
-                        Color(0xFF65656B), BlendMode.srcIn),
+                    colorFilter:
+                        ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
                   ),
                   'Home',
                   0),
@@ -74,8 +74,8 @@ class _MenuPageState extends State<MenuPage> {
                     'assets/icon/Discovery.svg',
                     fit: BoxFit.contain,
                     width: 25,
-                    colorFilter: const ColorFilter.mode(
-                        Color(0xFF65656B), BlendMode.srcIn),
+                    colorFilter:
+                        ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
                   ),
                   'Explore',
                   1),
@@ -83,8 +83,8 @@ class _MenuPageState extends State<MenuPage> {
                   SvgPicture.asset(
                     'assets/icon/Chart.svg',
                     width: 25,
-                    colorFilter: const ColorFilter.mode(
-                        Color(0xFF65656B), BlendMode.srcIn),
+                    colorFilter:
+                        ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
                   ),
                   'Standings',
                   2),
@@ -92,8 +92,8 @@ class _MenuPageState extends State<MenuPage> {
                   SvgPicture.asset(
                     'assets/icon/Profile.svg',
                     width: 25,
-                    colorFilter: const ColorFilter.mode(
-                        Color(0xFF65656B), BlendMode.srcIn),
+                    colorFilter:
+                        ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
                   ),
                   'My Profile',
                   3),
@@ -120,14 +120,14 @@ class _MenuPageState extends State<MenuPage> {
                     children: [
                       Text(
                         label,
-                        style: TextStyle(color: Pallete.primaryColor),
+                        style: TextStyle(color: Pallete.blue1),
                       ),
                       const SizedBox(height: 8),
                       Container(
                         width: 4,
                         height: 4,
                         decoration: BoxDecoration(
-                            color: Pallete.primaryColor,
+                            color: Pallete.blue1,
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ],

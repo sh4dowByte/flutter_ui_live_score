@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../config/pallete.dart';
 import '../../../config/routes.dart';
 import '../../../widgets/widgets.dart';
 
@@ -138,12 +139,11 @@ class StandingsPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 28),
             child: AppTextInput(
               hintText: 'Search your competition ...',
-              fillColor: const Color(0xFF222232),
+              fillColor: Pallete.black1,
               icon: SvgPicture.asset(
                 'assets/icon/Search.svg',
                 fit: BoxFit.fitHeight,
-                colorFilter:
-                    const ColorFilter.mode(Color(0xFF65656B), BlendMode.srcIn),
+                colorFilter: ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
               ),
             ),
           ),
@@ -205,7 +205,7 @@ class AppStandingsTeam extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
             decoration: BoxDecoration(
-              color: const Color(0xFF222232),
+              color: Pallete.black1,
               borderRadius: BorderRadius.circular(19),
             ),
             child: Column(
@@ -270,10 +270,10 @@ class AppStandingsTeam extends StatelessWidget {
               )
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 190),
+          Padding(
+            padding: const EdgeInsets.only(left: 190),
             child: Divider(
-              color: Color(0xFF181829),
+              color: Pallete.black2,
             ),
           ),
         ],

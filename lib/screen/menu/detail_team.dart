@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_live_score/config/pallete.dart';
 import 'package:flutter_ui_live_score/widgets/widgets.dart';
 
 class DetailTeam extends StatefulWidget {
@@ -85,10 +86,7 @@ class _DetailTeamState extends State<DetailTeam>
             indicatorPadding: EdgeInsets.symmetric(horizontal: -20),
             indicator: BoxDecoration(
               gradient: LinearGradient(
-                colors: const [
-                  Color(0xFFF4A58A),
-                  Color(0xFFED6B4E)
-                ], // Warna gradien
+                colors: Pallete.gradientColor, // Warna gradien
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -130,7 +128,7 @@ class LineUpPage extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text(
                 'Formation',
                 style: TextStyle(fontSize: 20),
@@ -138,7 +136,7 @@ class LineUpPage extends StatelessWidget {
               SizedBox(width: 14),
               Text(
                 '(4-2-3-1)',
-                style: TextStyle(color: Color(0xFFC4C4C4)),
+                style: TextStyle(color: Pallete.grey1),
               ),
             ],
           ),
@@ -250,7 +248,7 @@ class MatchDetailPage extends StatelessWidget {
             width: 100,
             child: Text(
               name,
-              style: TextStyle(fontSize: 20, color: Color(0xFFC4C4C4)),
+              style: TextStyle(fontSize: 20, color: Pallete.grey1),
               textAlign: TextAlign.center,
             ),
           ),
@@ -282,10 +280,10 @@ class TeamLogo extends StatelessWidget {
           height: 60,
           width: 60,
           decoration: BoxDecoration(
-            color: Color(0xFF222232),
+            color: Pallete.black1,
             borderRadius: BorderRadius.circular(60),
             border: Border.all(
-              color: Color(0xFF2B2B3D), // Color of the border
+              color: Pallete.blackBorder, // Color of the border
               width: 3, // Width of the border
             ),
           ),

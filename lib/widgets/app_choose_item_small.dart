@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../config/pallete.dart';
+
 class AppChooseItemSmall extends StatefulWidget {
   final List<Map<String, dynamic>> item;
   const AppChooseItemSmall({super.key, required this.item});
@@ -61,12 +63,8 @@ class _AppChooseItemSmallState extends State<AppChooseItemSmall> {
                       borderRadius: BorderRadius.circular(23),
                       gradient: LinearGradient(
                         colors: [
-                          isActive
-                              ? const Color(0xFFF4A58A)
-                              : const Color(0xFF222232),
-                          isActive
-                              ? const Color(0xFFED6B4E)
-                              : const Color(0xFF222232)
+                          isActive ? const Color(0xFFF4A58A) : Pallete.black1,
+                          isActive ? const Color(0xFFED6B4E) : Pallete.black1
                         ], // Warna gradien
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_live_score/screen/menu/detail_team.dart';
 import '../screen/screen.dart';
 
 class Routes {
@@ -9,6 +8,7 @@ class Routes {
   static const String detailTeam = '/detail_team';
   static const String detailStandings = '/detail_standings';
   static const String searchExplore = '/search_explore';
+  static const String articleDetail = '/article_detail';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -24,6 +24,8 @@ class Routes {
         return MaterialPageRoute(builder: (_) => const DetailStandingsPage());
       case searchExplore:
         return MaterialPageRoute(builder: (_) => const ExploreSearchPage());
+      case articleDetail:
+        return MaterialPageRoute(builder: (_) => const ArticleDetailPage());
       case '/':
       default:
         return MaterialPageRoute(
