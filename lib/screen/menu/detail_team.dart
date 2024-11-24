@@ -29,27 +29,25 @@ class _DetailTeamState extends State<DetailTeam>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Padding(
+          padding: const EdgeInsets.only(right: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text(
+                "UEFA Champions League",
+                style: TextStyle(fontSize: 24),
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Heading
-          SizedBox(height: 24),
-          Padding(
-            padding: const EdgeInsets.all(28.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
-                    onTap: () => Navigator.of(context).pop(),
-                    child: Icon(Icons.arrow_back_ios_new_rounded)),
-                Text(
-                  "UEFA Champions League",
-                  style: TextStyle(fontSize: 24),
-                ),
-                Container()
-              ],
-            ),
-          ),
+          SizedBox(height: 31),
 
           // Items
           Row(

@@ -8,6 +8,7 @@ class Routes {
   static const String menu = '/menu';
   static const String detailTeam = '/detail_team';
   static const String detailStandings = '/detail_standings';
+  static const String searchExplore = '/search_explore';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -21,6 +22,8 @@ class Routes {
         return MaterialPageRoute(builder: (_) => const DetailTeam());
       case detailStandings:
         return MaterialPageRoute(builder: (_) => const DetailStandingsPage());
+      case searchExplore:
+        return MaterialPageRoute(builder: (_) => const ExploreSearchPage());
       case '/':
       default:
         return MaterialPageRoute(

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../widgets/widgets.dart';
+import '../../../config/routes.dart';
+import '../../../widgets/widgets.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});
@@ -62,12 +63,13 @@ class ExplorePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 50),
+          const SizedBox(height: 65),
 
           // Search
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 28),
             child: AppTextInput(
+              onTap: () => Navigator.pushNamed(context, Routes.searchExplore),
               hintText: 'Search for news, team, match, etc...',
               fillColor: const Color(0xFF222232),
               icon: SvgPicture.asset(
@@ -87,6 +89,7 @@ class ExplorePage extends StatelessWidget {
 
           Expanded(
             child: ListView(
+              padding: const EdgeInsets.all(0),
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 28.0),

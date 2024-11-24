@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../config/routes.dart';
-import '../../widgets/widgets.dart';
+import '../../../config/routes.dart';
+import '../../../widgets/widgets.dart';
 
 class StandingsPage extends StatelessWidget {
   const StandingsPage({super.key});
@@ -131,7 +131,7 @@ class StandingsPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 50),
+          const SizedBox(height: 65),
 
           // Search
           Padding(
@@ -158,6 +158,7 @@ class StandingsPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 28.0),
               child: ListView(
+                padding: const EdgeInsets.all(0),
                 children: [
                   ...standingTeams.map(
                     (e) => AppStandingsTeam(
@@ -255,7 +256,7 @@ class AppStandingsTeam extends StatelessWidget {
                     ),
                     const SizedBox(width: 9),
                   ],
-                  SizedBox(width: 150, child: Text(teams)),
+                  SizedBox(width: 100, child: Text(teams)),
                 ],
               ),
               Row(

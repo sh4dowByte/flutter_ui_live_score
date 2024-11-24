@@ -5,3 +5,5 @@ export 'app_remember_me.dart';
 export 'app_score.dart';
 export 'app_select_item.dart';
 export 'app_select_item_small.dart';
+export 'app_choose_item_small.dart';
+export 'app_choose_item.dart';

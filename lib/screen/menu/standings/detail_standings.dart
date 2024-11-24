@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
+import '../../../widgets/widgets.dart';
+
 class DetailStandingsPage extends StatelessWidget {
   const DetailStandingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<Map<String, dynamic>> filterItems = [
+      {'id': 1, 'name': 'All'},
+      {'id': 2, 'name': 'Home'},
+      {'id': 3, 'name': 'Away'},
+    ];
     List<Map<String, dynamic>> standingTeams = [
       {
         'flags': 'assets/Atletico.png',
@@ -174,6 +181,8 @@ class DetailStandingsPage extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 32),
+          AppChooseItemSmall(item: filterItems),
           const SizedBox(height: 24),
           Expanded(
             child: Padding(
@@ -241,7 +250,7 @@ class DetailStandingsPage extends StatelessWidget {
                   ),
                   const SizedBox(width: 9),
                 ],
-                SizedBox(width: 150, child: Text(teams)),
+                SizedBox(width: 80, child: Text(teams)),
               ],
             ),
             Row(

@@ -138,55 +138,9 @@ class AppScoreTeam extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            padding: const EdgeInsets.all(15),
-            width: 30,
-            child: Stack(
-              clipBehavior:
-                  Clip.none, // Untuk memastikan elemen tidak terpotong
-              children: [
-                // Gambar pertama
-                Positioned(
-                  left: 37,
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF222232),
-                      borderRadius: BorderRadius.circular(45),
-                      border: Border.all(
-                        color: const Color(0xFF2B2B3D), // Color of the border
-                        width: 3, // Width of the border
-                      ),
-                    ),
-                    child: Image.asset(
-                      flag2,
-                    ),
-                  ),
-                ),
-                // Gambar kedua (bergeser ke kanan)
-                Positioned(
-                  left: 0, // Sesuaikan jaraknya agar lebih presisi
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    height: 45,
-                    width: 45,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF222232),
-                      borderRadius: BorderRadius.circular(45),
-                      border: Border.all(
-                        color: const Color(0xFF2B2B3D), // Color of the border
-                        width: 3, // Width of the border
-                      ),
-                    ),
-                    child: Image.asset(
-                      flag,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+          SizedBox(
+            width: 80,
+            child: AppScoreTeamFlags(flag2: flag2, flag: flag),
           ),
           Row(
             children: [
@@ -226,6 +180,70 @@ class AppScoreTeam extends StatelessWidget {
               ),
             ),
             child: Center(child: Text(leadText)),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class AppScoreTeamFlags extends StatelessWidget {
+  const AppScoreTeamFlags({
+    super.key,
+    required this.flag2,
+    required this.flag,
+  });
+
+  final String flag2;
+  final String flag;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(15),
+      width: 30,
+      child: Stack(
+        clipBehavior: Clip.none, // Untuk memastikan elemen tidak terpotong
+        children: [
+          // Gambar pertama
+          Positioned(
+            left: 37,
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              height: 45,
+              width: 45,
+              decoration: BoxDecoration(
+                color: const Color(0xFF222232),
+                borderRadius: BorderRadius.circular(45),
+                border: Border.all(
+                  color: const Color(0xFF2B2B3D), // Color of the border
+                  width: 3, // Width of the border
+                ),
+              ),
+              child: Image.asset(
+                flag2,
+              ),
+            ),
+          ),
+          // Gambar kedua (bergeser ke kanan)
+          Positioned(
+            left: 0, // Sesuaikan jaraknya agar lebih presisi
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              height: 45,
+              width: 45,
+              decoration: BoxDecoration(
+                color: const Color(0xFF222232),
+                borderRadius: BorderRadius.circular(45),
+                border: Border.all(
+                  color: const Color(0xFF2B2B3D), // Color of the border
+                  width: 3, // Width of the border
+                ),
+              ),
+              child: Image.asset(
+                flag,
+              ),
+            ),
           ),
         ],
       ),

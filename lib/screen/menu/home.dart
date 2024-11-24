@@ -11,6 +11,49 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Map<String, dynamic>> items = [
+      {
+        'liga': {
+          'name': 'La Liga',
+          'flag': 'assets/image 10.png',
+          'country': 'Spain',
+        },
+        'team': [
+          {
+            'name': 'Barcelona',
+            'flag': 'assets/barcelona.png',
+            'score': '2',
+          },
+          {
+            'name': 'Real Madrid',
+            'flag': 'assets/realmadrid.png',
+            'score': '0',
+          }
+        ],
+        'status': 'HT',
+      },
+      {
+        'liga': {
+          'name': 'Premier League',
+          'flag': 'assets/image 9.png',
+          'country': 'England',
+        },
+        'team': [
+          {
+            'name': 'Aston Villa',
+            'flag': 'assets/idezia.png',
+            'score': '2',
+          },
+          {
+            'name': 'Liverpool',
+            'flag': 'assets/realmadrid.png',
+            'score': '3',
+          }
+        ],
+        'status': 'FT',
+      },
+    ];
+
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -18,7 +61,7 @@ class HomePage extends StatelessWidget {
           // Heading
           SizedBox(height: 24),
           Padding(
-            padding: const EdgeInsets.all(28.0),
+            padding: const EdgeInsets.all(28.0).copyWith(bottom: 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -82,6 +125,7 @@ class HomePage extends StatelessWidget {
           // Items
           Expanded(
             child: ListView(
+              padding: EdgeInsets.all(0),
               children: [
                 // Banner
                 Padding(
@@ -188,36 +232,22 @@ class HomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 28.0),
                   child: Column(
-                    children: [
-                      AppScore(
-                        ligaFlag: 'assets/image 10.png',
-                        liga: 'La Liga',
-                        country: 'Spain',
-                        flag: 'assets/barcelona.png',
-                        flag2: 'assets/realmadrid.png',
-                        team: 'Barcelona',
-                        team2: 'Real Madrid',
-                        scoreTeam: '2',
-                        scoreTeam2: '0',
-                        leadText: 'HT',
-                        onTap: () =>
-                            Navigator.pushNamed(context, Routes.detailTeam),
-                      ),
-                      AppScore(
-                        ligaFlag: 'assets/image 9.png',
-                        liga: 'Premier League',
-                        country: 'England',
-                        flag: 'assets/idezia.png',
-                        flag2: 'assets/realmadrid.png',
-                        team: 'Aston Villa',
-                        team2: 'Liverpool',
-                        scoreTeam: '2',
-                        scoreTeam2: '3',
-                        leadText: 'FT',
-                        onTap: () =>
-                            Navigator.pushNamed(context, Routes.detailTeam),
-                      ),
-                    ],
+                    children: items
+                        .map((e) => AppScore(
+                              ligaFlag: e['liga']['flag'],
+                              liga: e['liga']['name'],
+                              country: e['liga']['country'],
+                              flag: e['team'][0]['flag'],
+                              flag2: e['team'][1]['flag'],
+                              team: e['team'][0]['name'],
+                              team2: e['team'][1]['name'],
+                              scoreTeam: e['team'][0]['score'],
+                              scoreTeam2: e['team'][1]['score'],
+                              leadText: e['status'],
+                              onTap: () => Navigator.pushNamed(
+                                  context, Routes.detailTeam),
+                            ))
+                        .toList(),
                   ),
                 ),
               ],

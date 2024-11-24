@@ -199,7 +199,7 @@ class SignIn extends StatelessWidget {
               colorFilter: ColorFilter.mode(Color(0xFF65656B), BlendMode.srcIn),
             ),
           ),
-          SizedBox(height: 26),
+          SizedBox(height: 10),
 
           // Remember me
           Padding(
@@ -207,7 +207,7 @@ class SignIn extends StatelessWidget {
             child: AppRememberMe(),
           ),
 
-          SizedBox(height: 26),
+          SizedBox(height: 15),
 
           AppButton(
             'Sign In',

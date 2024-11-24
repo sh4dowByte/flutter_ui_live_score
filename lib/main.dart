@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Live Score',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.dark,
       onGenerateRoute: Routes.generateRoute,
