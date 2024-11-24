@@ -104,7 +104,7 @@ class _ArticleDetailPageState extends State<ArticleDetailPage> {
                     AppCircleButton(
                       isTransparent: true,
                       icon: SvgPicture.asset(
-                        'assets/icon/Share.svg',
+                        'assets/icon/share.svg',
                         fit: BoxFit.fitHeight,
                         colorFilter: const ColorFilter.mode(
                             Color(0xFFFFFFFF), BlendMode.srcIn),
@@ -292,10 +292,10 @@ class HeaderBodySliver extends StatelessWidget {
         Image.asset(
           'assets/image/articel4.png',
           fit: BoxFit.cover,
-          height: 300,
+          height: 500,
         ),
         Positioned(
-          top: 65,
+          top: 120,
           right: 20,
           child: Container(
             height: 45,
