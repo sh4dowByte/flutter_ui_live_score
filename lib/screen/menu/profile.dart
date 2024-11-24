@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_ui_live_score/config/pallete.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -75,11 +76,8 @@ class _ProfilePageState extends State<ProfilePage>
                         height: 32,
                         width: 32,
                         decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            colors: [
-                              Color(0xFFF4A58A),
-                              Color(0xFFED6B4E)
-                            ], // Warna gradien
+                          gradient: LinearGradient(
+                            colors: Pallete.gradientColor, // Warna gradien
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
@@ -107,9 +105,9 @@ class _ProfilePageState extends State<ProfilePage>
               style: TextStyle(fontSize: 26),
             ),
             const SizedBox(height: 6),
-            const Text(
+            Text(
               '#YNWK till the end 🔥',
-              style: TextStyle(color: Color(0xFFC4C4C4)),
+              style: TextStyle(color: Pallete.grey1),
             ),
 
             const SizedBox(height: 32),
@@ -125,15 +123,12 @@ class _ProfilePageState extends State<ProfilePage>
               labelPadding: const EdgeInsets.symmetric(horizontal: 30),
               indicatorPadding: const EdgeInsets.symmetric(horizontal: -20),
               indicator: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [
-                    Color(0xFFF4A58A),
-                    Color(0xFFED6B4E)
-                  ], // Warna gradien
+                gradient: LinearGradient(
+                  colors: Pallete.gradientColor,
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                borderRadius: BorderRadius.circular(23), // Membulatkan sudut
+                borderRadius: BorderRadius.circular(23),
               ),
               tabs: const [
                 Tab(text: "My Profile"),
@@ -245,7 +240,7 @@ class AppListTile extends StatelessWidget {
                       height: 32,
                       padding: const EdgeInsets.all(7),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF222232),
+                        color: Pallete.black1,
                         borderRadius: BorderRadius.circular(32),
                       ),
                       child: icon),
@@ -260,7 +255,7 @@ class AppListTile extends StatelessWidget {
                       ),
                       Text(
                         subtitle,
-                        style: const TextStyle(color: Color(0xFFC4C4C4)),
+                        style: TextStyle(color: Pallete.grey1),
                       ),
                       // Divider(),
                     ],

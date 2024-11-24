@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_ui_live_score/config/pallete.dart';
 
 import '../../config/routes.dart';
 import '../../widgets/widgets.dart';
@@ -97,10 +98,8 @@ class HomePage extends StatelessWidget {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 gradient: LinearGradient(
-                                  colors: const [
-                                    Color(0xFFF4A58A),
-                                    Color(0xFFED6B4E)
-                                  ], // Warna gradien
+                                  colors:
+                                      Pallete.gradientColor, // Warna gradien
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ),
@@ -140,8 +139,8 @@ class HomePage extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
                             gradient: LinearGradient(
-                              colors: const [
-                                Color(0xFF246BFD),
+                              colors: [
+                                Pallete.blue1,
                                 Color(0xFF0C0C69)
                               ], // Warna gradien
                               begin: Alignment.topLeft,
@@ -150,7 +149,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          right: 0,
+                          right: -20,
                           top: 0,
                           bottom: 0,
                           child: Transform(

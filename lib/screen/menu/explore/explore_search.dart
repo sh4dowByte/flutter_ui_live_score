@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../config/pallete.dart';
 import '../../../widgets/widgets.dart';
 
 class ExploreSearchPage extends StatelessWidget {
@@ -141,12 +142,12 @@ class ExploreSearchPage extends StatelessWidget {
                   flex: 3,
                   child: AppTextInput(
                     hintText: 'Search for news, team, match, etc...',
-                    fillColor: const Color(0xFF222232),
+                    fillColor: Pallete.black1,
                     icon: SvgPicture.asset(
                       'assets/icon/Search.svg',
                       fit: BoxFit.fitHeight,
-                      colorFilter: const ColorFilter.mode(
-                          Color(0xFF65656B), BlendMode.srcIn),
+                      colorFilter:
+                          ColorFilter.mode(Pallete.grey2, BlendMode.srcIn),
                     ),
                   ),
                 ),
@@ -230,16 +231,16 @@ class SearchItems extends StatelessWidget {
             Text("$team1 VS $team2"),
             Text(
               date,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 12,
-                color: Color(0xFF65656B),
+                color: Pallete.grey2,
               ),
             ),
           ],
         ),
-        const Icon(
+        Icon(
           Icons.close,
-          color: Color(0xFF65656B),
+          color: Pallete.grey2,
         ),
       ],
     );

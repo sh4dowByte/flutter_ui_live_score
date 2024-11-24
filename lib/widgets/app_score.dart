@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../config/pallete.dart';
+
 class AppScore extends StatelessWidget {
   final String ligaFlag;
   final String liga;
@@ -132,7 +134,7 @@ class AppScoreTeam extends StatelessWidget {
     return Container(
       height: 68,
       decoration: BoxDecoration(
-        color: const Color(0xFF2B2B3D),
+        color: Pallete.blackBorder,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -172,9 +174,9 @@ class AppScoreTeam extends StatelessWidget {
           Container(
             height: 70,
             width: 47,
-            decoration: const BoxDecoration(
-              color: Color(0xFF222232),
-              borderRadius: BorderRadius.only(
+            decoration: BoxDecoration(
+              color: Pallete.black1,
+              borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(10),
                 bottomRight: Radius.circular(10),
               ),
@@ -213,10 +215,10 @@ class AppScoreTeamFlags extends StatelessWidget {
               height: 45,
               width: 45,
               decoration: BoxDecoration(
-                color: const Color(0xFF222232),
+                color: Pallete.black1,
                 borderRadius: BorderRadius.circular(45),
                 border: Border.all(
-                  color: const Color(0xFF2B2B3D), // Color of the border
+                  color: Pallete.blackBorder, // Color of the border
                   width: 3, // Width of the border
                 ),
               ),
@@ -233,10 +235,10 @@ class AppScoreTeamFlags extends StatelessWidget {
               height: 45,
               width: 45,
               decoration: BoxDecoration(
-                color: const Color(0xFF222232),
+                color: Pallete.black1,
                 borderRadius: BorderRadius.circular(45),
                 border: Border.all(
-                  color: const Color(0xFF2B2B3D), // Color of the border
+                  color: Pallete.blackBorder, // Color of the border
                   width: 3, // Width of the border
                 ),
               ),

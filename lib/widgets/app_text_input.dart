@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../config/pallete.dart';
+
 class AppTextInput extends StatelessWidget {
   final String hintText;
   final Widget? icon;
@@ -26,8 +28,8 @@ class AppTextInput extends StatelessWidget {
           fontSize: 14,
         ),
         decoration: InputDecoration(
-          hintStyle: const TextStyle(
-            color: Color(0xFF65656B),
+          hintStyle: TextStyle(
+            color: Pallete.grey2,
             fontSize: 14,
           ),
           prefixIcon: icon,
@@ -36,23 +38,23 @@ class AppTextInput extends StatelessWidget {
             minHeight: 25, // Atur tinggi minimum
           ),
           filled: true,
-          fillColor: fillColor ?? const Color(0xFF181829),
+          fillColor: fillColor ?? Pallete.black2,
           hintText: hintText,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: const BorderSide(color: Color(0xFF181829)),
+            borderSide: BorderSide(color: Pallete.black2),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: const BorderSide(color: Color(0xFF181829)),
+            borderSide: BorderSide(color: Pallete.black2),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: const BorderSide(color: Color(0xFF181829)),
+            borderSide: BorderSide(color: Pallete.black2),
           ),
           disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: const BorderSide(color: Color(0xFF181829)),
+            borderSide: BorderSide(color: Pallete.black2),
           ),
         ),
       ),

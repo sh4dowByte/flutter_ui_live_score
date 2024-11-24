@@ -3,31 +3,33 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'pallete.dart';
+
 class AppTheme {
   // Dark Theme Data (Opsional)
   static ThemeData get darkTheme {
     Color primaryTextColor = const Color(0xFFFFFFFF);
-    Color secondaryTextColor = const Color(0xFF65656B);
+    Color secondaryTextColor = Pallete.grey2;
 
     return ThemeData(
       brightness: Brightness.dark,
       fontFamily: GoogleFonts.sourceSans3().fontFamily,
-      scaffoldBackgroundColor: const Color(0xFF181829),
-      primaryColor: const Color(0xFF246BFD),
+      scaffoldBackgroundColor: Pallete.black2,
+      primaryColor: Pallete.blue1,
       primaryColorDark: const Color(0xFFE6E7F2),
       primaryColorLight: Colors.black,
-      dividerTheme: const DividerThemeData(color: Color(0xFF222232)),
+      dividerTheme: DividerThemeData(color: Pallete.black1),
       tabBarTheme: TabBarTheme(
         splashFactory: NoSplash.splashFactory, // Menonaktifkan ripple
         overlayColor: MaterialStateProperty.all(
             Colors.transparent), // Menonaktifkan hover
       ),
-      appBarTheme: const AppBarTheme(
-        backgroundColor: Color(0xFF181829),
+      appBarTheme: AppBarTheme(
+        backgroundColor: Pallete.black2,
         elevation: 0,
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        backgroundColor: Color(0xFF222232), // Warna background untuk mode gelap
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: Pallete.black1, // Warna background untuk mode gelap
       ),
       textTheme: TextTheme(
         displayLarge: TextStyle(
