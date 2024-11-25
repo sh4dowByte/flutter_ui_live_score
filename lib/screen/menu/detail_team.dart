@@ -54,7 +54,7 @@ class _DetailTeamState extends State<DetailTeam>
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              TeamLogo(team: 'Arsenal', icon: 'assets/arsenal.png'),
+              TeamLogo(team: 'Arsenal', icon: '21738'),
               SizedBox(width: 47),
               Column(
                 children: [
@@ -69,7 +69,7 @@ class _DetailTeamState extends State<DetailTeam>
                 ],
               ),
               SizedBox(width: 47),
-              TeamLogo(team: 'Aston Villa', icon: 'assets/Villareal.png'),
+              TeamLogo(team: 'Aston Villa', icon: 'PCk03dnY8Y5q'),
             ],
           ),
           SizedBox(height: 32),
@@ -205,8 +205,8 @@ class MatchDetailPage extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(bottom: 20),
                   child: AppScoreTeam(
-                    flag: 'assets/manchester.png',
-                    flag2: 'assets/idezia.png',
+                    flag: 'udQ6ns69PctCv143h-GeYw',
+                    flag2: 'fhBITrIlbQxhVB6IjxUO6Q',
                     team: 'Man United',
                     team2: 'Chelsea FC',
                     scoreTeam: '2',
@@ -217,8 +217,8 @@ class MatchDetailPage extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(bottom: 20),
                   child: AppScoreTeam(
-                    flag: 'assets/tottenham.png',
-                    flag2: 'assets/southampton.png',
+                    flag: 'k3Q_mKE98Dnohrcea0JFgQ',
+                    flag2: 'y1V4sm2SEBiWUPRIYl5rfg',
                     team: 'Totenham',
                     team2: 'Southamton',
                     scoreTeam: '1',
@@ -287,9 +287,7 @@ class TeamLogo extends StatelessWidget {
               width: 3, // Width of the border
             ),
           ),
-          child: Image.asset(
-            icon,
-          ),
+          child: AppIcons8.getById(icon),
         ),
         SizedBox(height: 16),
         Text(team),

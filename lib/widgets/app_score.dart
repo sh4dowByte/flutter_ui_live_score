@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_live_score/widgets/widgets.dart';
 
 import '../config/pallete.dart';
+import 'app_icons8.dart';
 
 class AppScore extends StatelessWidget {
   final String ligaFlag;
@@ -78,10 +80,7 @@ class AppLiga extends StatelessWidget {
       children: [
         Row(
           children: [
-            Image.asset(
-              ligaFlag,
-              width: 24,
-            ),
+            AppIcons8.getById(ligaFlag, width: 24, height: 24),
             const SizedBox(width: 12),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -222,9 +221,7 @@ class AppScoreTeamFlags extends StatelessWidget {
                   width: 3, // Width of the border
                 ),
               ),
-              child: Image.asset(
-                flag2,
-              ),
+              child: AppTeamSportIcon.getById(flag2),
             ),
           ),
           // Gambar kedua (bergeser ke kanan)
@@ -242,9 +239,7 @@ class AppScoreTeamFlags extends StatelessWidget {
                   width: 3, // Width of the border
                 ),
               ),
-              child: Image.asset(
-                flag,
-              ),
+              child: AppTeamSportIcon.getById(flag),
             ),
           ),
         ],

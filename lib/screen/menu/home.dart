@@ -16,18 +16,18 @@ class HomePage extends StatelessWidget {
       {
         'liga': {
           'name': 'La Liga',
-          'flag': 'assets/image 10.png',
+          'flag': 'ZGEFKpJoPdJQ',
           'country': 'Spain',
         },
         'team': [
           {
             'name': 'Barcelona',
-            'flag': 'assets/barcelona.png',
+            'flag': 'paYnEE8hcrP96neHRNofhQ',
             'score': '2',
           },
           {
             'name': 'Real Madrid',
-            'flag': 'assets/realmadrid.png',
+            'flag': 'Th4fAVAZeCJWRcKoLW7koA',
             'score': '0',
           }
         ],
@@ -36,18 +36,18 @@ class HomePage extends StatelessWidget {
       {
         'liga': {
           'name': 'Premier League',
-          'flag': 'assets/image 9.png',
+          'flag': 'ct9PWm65omja',
           'country': 'England',
         },
         'team': [
           {
             'name': 'Aston Villa',
-            'flag': 'assets/idezia.png',
+            'flag': 'uyNNelfnFvCEnsLrUL-j2Q',
             'score': '2',
           },
           {
             'name': 'Liverpool',
-            'flag': 'assets/realmadrid.png',
+            'flag': 'nGfV05dipbAc7zzojivKew',
             'score': '3',
           }
         ],
