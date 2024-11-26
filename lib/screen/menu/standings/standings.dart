@@ -22,13 +22,13 @@ class StandingsPage extends StatelessWidget {
     List<Map<String, dynamic>> standingTeams = [
       {
         'liga': {
-          'flag': 'assets/image 10.png',
           'name': 'La Liga',
+          'flag': 'ZGEFKpJoPdJQ',
           'country': 'Spain',
         },
         'teams': [
           {
-            'flags': 'assets/Atletico.png',
+            'flags': 'pEqmA7CL-VRo4Llq3rwIPA',
             'name': 'Atlético Madrid',
             'score': {
               'd': '2',
@@ -39,7 +39,7 @@ class StandingsPage extends StatelessWidget {
             }
           },
           {
-            'flags': 'assets/realmadrid.png',
+            'flags': 'Th4fAVAZeCJWRcKoLW7koA',
             'name': 'Real Madrid',
             'score': {
               'd': '4',
@@ -50,7 +50,7 @@ class StandingsPage extends StatelessWidget {
             }
           },
           {
-            'flags': 'assets/barcelona.png',
+            'flags': 'paYnEE8hcrP96neHRNofhQ',
             'name': 'Barcelona',
             'score': {
               'd': '4',
@@ -61,7 +61,7 @@ class StandingsPage extends StatelessWidget {
             }
           },
           {
-            'flags': 'assets/Villareal.png',
+            'flags': 'WKH7Ak5cYD6Qm1EEqXzmVw',
             'name': 'Villareal',
             'score': {
               'd': '8',
@@ -75,13 +75,13 @@ class StandingsPage extends StatelessWidget {
       },
       {
         'liga': {
-          'flag': 'assets/image 9.png',
           'name': 'Premier League',
+          'flag': 'ct9PWm65omja',
           'country': 'England',
         },
         'teams': [
           {
-            'flags': 'assets/Atletico.png',
+            'flags': 'nGfV05dipbAc7zzojivKew',
             'name': 'Liverpool',
             'score': {
               'd': '6',
@@ -92,7 +92,7 @@ class StandingsPage extends StatelessWidget {
             }
           },
           {
-            'flags': 'assets/manchester.png',
+            'flags': 'udQ6ns69PctCv143h-GeYw',
             'name': 'Man United',
             'score': {
               'd': '3',
@@ -103,7 +103,7 @@ class StandingsPage extends StatelessWidget {
             }
           },
           {
-            'flags': 'assets/barcelona.png',
+            'flags': 'paYnEE8hcrP96neHRNofhQ',
             'name': 'Leicester City',
             'score': {
               'd': '2',
@@ -114,7 +114,7 @@ class StandingsPage extends StatelessWidget {
             }
           },
           {
-            'flags': 'assets/Villareal.png',
+            'flags': 'WKH7Ak5cYD6Qm1EEqXzmVw',
             'name': 'Villareal',
             'score': {
               'd': '8',
@@ -249,11 +249,7 @@ class AppStandingsTeam extends StatelessWidget {
               Row(
                 children: [
                   if (flags != null) ...[
-                    Image.asset(
-                      flags,
-                      width: 16,
-                      height: 16,
-                    ),
+                    AppTeamSportIcon.getById(flags, width: 16, height: 16),
                     const SizedBox(width: 9),
                   ],
                   SizedBox(width: 100, child: Text(teams)),

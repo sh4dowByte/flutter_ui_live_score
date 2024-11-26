@@ -8,3 +8,5 @@ export 'app_select_item_small.dart';
 export 'app_choose_item_small.dart';
 export 'app_choose_item.dart';
 export 'app_circle_button.dart';
+export 'app_icons8.dart';
+export 'app_team_sport_icon.dart';
