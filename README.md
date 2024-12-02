@@ -11,6 +11,11 @@
 
 Flutter Live Score UI is a mobile application developed using Flutter, designed to display live sports scores with a modern and responsive user interface. This project is a result of slicing a design created in Figma, focusing on visual details and delivering an optimal user experience. The app serves as a reference for building live score applications with an attractive UI and high performance.
 
+<a href="https://github.com/sh4dowByte/flutter_ui_live_score/releases/download/v1.0.0%2B1-4/app-release.apk">
+    <img src="https://playerzon.com/asset/download.png" width="200" data-canonical-src="https://playerzon.com/asset/download.png" style="max-width: 100%;">
+</a>
+
+
 ## 🎨 Design
 
 The design of this application is based on the provided Figma file. The slicing process was carried out meticulously to ensure the application accurately represents the design.
@@ -62,6 +67,6 @@ For more details, refer to the [full license text](LICENSE).
 
 ## Disclaimer
 
-The design of this application is based on a free Figma template available in the Figma Community. All rights to the original design are retained by the respective creator. This implementation is intended solely for educational and non-commercial purposes.
+The design of this application is based on a free Figma template available in the Figma Community, originally created by **[Odama Studio and Rohmad_ K]**. All rights to the original design are retained by the respective creator. This implementation is intended solely for educational and non-commercial purposes.
 
-This project utilizes a design sourced from the Figma Community. Licensing terms of the original design may apply. Please review the original Figma design [here](https://www.figma.com/community/file/936495139689782604) to ensure compliance with its terms before utilizing this project in any capacity.
+This project utilizes a design sourced from the Figma Community, created by **[Odama Studio and Rohmad_ K]**. Licensing terms of the original design may apply. Please review the original Figma design [here](https://www.figma.com/community/file/936495139689782604) to ensure compliance with its terms before utilizing this project in any capacity.
